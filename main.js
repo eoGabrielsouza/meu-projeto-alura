@@ -33,6 +33,25 @@ const pecas = {
         "velocidade": -2
     }
 }
+var contadordeimg=1;
+var imagensArray = [ //caminho das suas imgs aqui
+'img/todos-robotron/robotron-amarelo.png',
+'img/todos-robotron/robotron-azul.png',
+'img/todos-robotron/robotron-branco.png',
+'img/todos-robotron/robotron-preto.png',
+'img/todos-robotron/robotron-rosa.png',
+'img/todos-robotron/robotron-vermelho.png'
+];
+function trocar(){
+
+    if(contadordeimg == imagensArray.length) //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
+    {
+      contadordeimg=0;
+    }
+    document.getElementById("robotron").src=imagensArray[contadordeimg]; //altera a img do elemento "agni" de acordo com o indice
+      contadordeimg++; // incrementa a nossa referencia
+  
+  }
 
 controle.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
